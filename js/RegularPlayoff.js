@@ -9,22 +9,8 @@ var jzhugong = []
 var cdisplay = []
 var jdisplay = []
 
-function readJSON(file, callback) {
-  let ajax = new XMLHttpRequest()
-  ajax.overrideMimeType('application/json')
-  ajax.open('GET', file, true)
-  ajax.onreadystatechange = function () {
-    if (ajax.readyState === 4 && ajax.status == '200') {
-      callback(ajax.responseText)
-    }
-  }
-  ajax.send(null)
-}
-
 function Init() {
-  readJSON('../data/Regular-Playoff.json', function (res) {
-    let data = JSON.parse(res)
-    console.log(data)
+  $.getJSON('../data/Regular-Playoff.json', function (data) {
     for (var i = 0; i < 14; i++) {
       cdefen.push(data[i].常规赛得分)
       clanban.push(data[i].常规赛篮板)
@@ -39,23 +25,6 @@ function Init() {
     Draw()
   })
 }
-
-// function Init() {
-//   $.getJSON('../data/Regular-Playoff.json', function (data) {
-//     for (var i = 0; i < 14; i++) {
-//       cdefen.push(data[i].常规赛得分)
-//       clanban.push(data[i].常规赛篮板)
-//       czhugong.push(data[i].常规赛助攻)
-//       jdefen.push(data[i].季后赛得分)
-//       jlanban.push(data[i].季后赛篮板)
-//       jzhugong.push(data[i].季后赛助攻)
-//       tsaiji.push(data[i].赛季)
-//     }
-//     cdisplay = cdefen.concat()
-//     jdisplay = jdefen.concat()
-//     Draw()
-//   })
-// }
 
 function Draw() {
   var dom = document.getElementById('echart2')
