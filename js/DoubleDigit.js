@@ -24,7 +24,7 @@ option = {
       roseType: 'area',
 
       data: [
-        { value: 1003, name: '詹姆斯' },
+        { value: 1024, name: '詹姆斯' },
         { value: 866, name: '乔丹' },
         { value: 787, name: '贾巴尔' },
         { value: 575, name: '卡尔马龙' },
