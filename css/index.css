@@ -169,6 +169,9 @@ h6 {
 .table1 tr:nth-child(4) span {
   background: #49bcf7;
 }
+button{
+  border-radius: 8px;
+}
 #b_sdefen,
 #b_slanban,
 #b_szhugong,

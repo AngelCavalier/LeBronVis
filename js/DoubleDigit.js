@@ -1,4 +1,4 @@
-var dom = document.getElementById('echart3')
+var dom = document.getElementById('double')
 var myChart = echarts.init(dom)
 var app = {}
 option = null
