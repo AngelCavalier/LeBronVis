@@ -10,7 +10,7 @@ var cdisplay = [];
 var jdisplay = [];
 
 function Init() {
-  $.getJSON('http://www.freeaii.com:8080/regularPlayoff', function (data) {
+  $.getJSON('https://www.freeaii.com:8081/regularPlayoff', function (data) {
     for (var i = 0; i < 14; i++) {
       cdefen.push(data[i].常规赛得分);
       clanban.push(data[i].常规赛篮板);

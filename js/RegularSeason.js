@@ -9,7 +9,7 @@ var mymin, mymax;
 var display = [];
 
 function InitData() {
-  $.getJSON('http://www.freeaii.com:8080/regularData', function (data) {
+  $.getJSON('https://www.freeaii.com:8081/regularData', function (data) {
     for (var i = 0; i < 17; i++) {
       saiji.push(data[i].赛季);
       shijian.push(data[i].时间);
